@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        body.dark {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="saborInput" oninput="Sabor()" placeholder="Digite o sabor do sorvete">
+    <p id="resultado"></p>
+    <button onclick="toggleDarkMode()">Alternar Modo</button>
+    
+    <script>
+        function Sabor() {
+            const input = document.getElementById('saborInput').value.toLowerCase();
+            const resultado = document.getElementById('resultado');
+            
+            if (input.length > 3) {
+                switch (input) {
+                    case 'chocolate':
+                        resultado.textContent = "Eu amo sorvete de chocolate!";
+                        break;
+                    case 'flocos':
+                        resultado.textContent = "Ahh, mas chocolate é o meu favorito...";
+                        break;
+                    case 'baunilha':
+                        resultado.textContent = "Baunilha é um clássico!";
+                        break;
+                    default:
+                        resultado.textContent = "Ahh, eu esperava um sabor de sorvete...";
+                }
+            } else {
+                resultado.textContent = "Digite um sabor com mais de 3 letras.";
+            }
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark');
+        }
+    </script>
+</body>
+</html>
