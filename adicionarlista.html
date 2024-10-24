@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Item à Lista</title>
+</head>
+<body>
+    <ul id="Lista">
+        <li>lista</li>
+        <li>lista 2</li>
+    </ul>
+    <button id="adicionarLista">Adicionar Lista</button>
+
+    <script>
+        document.getElementById('adicionarLista').onclick = function() {
+            var novoItem = document.createElement('li');
+            novoItem.textContent = 'Novo Item';
+            document.getElementById('Lista').appendChild(novoItem);
+        };
+    </script>
+</body>
+</html>
