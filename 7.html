@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+   
+</head>
+<body>
+
+
+    <img id="personagem" src="/img/8b187a715d56d5b92f758b3155834409.jpg" alt="Soos">
+    <p id="mensagem">Passe o mouse sobre o Soos</p>   
+
+    <script>
+        
+        const personagem = document.getElementById('personagem');
+        const mensagem = document.getElementById('mensagem');
+
+        personagem.onmouseenter = () => mensagem.innerText = "OI!";
+        personagem.onmouseleave = () => mensagem.innerText = "com grandes poderes vem grandes responsabilidades!";
+        personagem.onmousemove = () => mensagem.innerText = "Só jesus salva!";
+        personagem.onclick = () => mensagem.innerText = "sou burro igual o joão antonio!";
+    </script>
+
+</body>
+</html>
